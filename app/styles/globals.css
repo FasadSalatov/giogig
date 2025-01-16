@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #AB28E7;
+  --primary-light: rgba(171, 40, 231, 0.1);
+  --secondary: #E7B728;
+  --secondary-light: rgba(231, 183, 40, 0.1);
+  --success: #22C55E;
+  --error: #EF4444;
+  --background: #FFFFFF;
+  --foreground: #000000;
+  --muted: rgba(0, 0, 0, 0.6);
+  --border: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --muted: rgba(255, 255, 255, 0.6);
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-[1200px];
+  }
+  
+  .card {
+    @apply rounded-2xl bg-white/80 dark:bg-black/80 backdrop-blur-xl border border-border shadow-sm;
+  }
+  
+  .gradient-border {
+    @apply rounded-2xl p-[1px] bg-gradient-to-br from-primary to-secondary hover:shadow-lg transition-shadow;
+  }
+  
+  .gradient-border > * {
+    @apply rounded-[14px] bg-background;
+  }
+  
+  .button-base {
+    @apply rounded-xl font-medium transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .button-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+  
+  .button-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90;
+  }
+  
+  .button-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary/10;
+  }
+  
+  .button-ghost {
+    @apply text-primary hover:bg-primary/10;
+  }
+}
