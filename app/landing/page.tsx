@@ -343,7 +343,7 @@ export default function LandingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative z-10 space-y-8"
+              className="relative z-10 space-y-8 mt-[-30%]"
             >
               {/* Floating Badge */}
               <motion.div
@@ -525,7 +525,7 @@ export default function LandingPage() {
                 {/* Floating Stats */}
                 <motion.div
                   animate={{
-                    y: [0, -20, 0],
+                    y: [10, -100, 0],
                   }}
                   transition={{
                     duration: 4,
@@ -547,7 +547,7 @@ export default function LandingPage() {
 
                 <motion.div
                   animate={{
-                    y: [0, 20, 0],
+                    y: [10, 80, 0],
                   }}
                   transition={{
                     duration: 5,
@@ -555,7 +555,7 @@ export default function LandingPage() {
                     ease: "easeInOut",
                     delay: 1
                   }}
-                  className="absolute bottom-1/4 left-1/4 bg-black/40 backdrop-blur-xl rounded-xl p-4 border border-[#F1DA8B]/30
+                  className="absolute bottom-1/4 left-4/4 bg-black/40 backdrop-blur-xl rounded-xl p-4 border border-[#F1DA8B]/30
                             hover:bg-black/60 transition-all duration-300 cursor-pointer"
                   whileHover={{ scale: 1.05 }}
                 >
@@ -570,7 +570,7 @@ export default function LandingPage() {
 
                 <motion.div
                   animate={{
-                    y: [0, 15, 0],
+                    y: [0, 45, 0],
                   }}
                   transition={{
                     duration: 6,
@@ -700,7 +700,7 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 className="relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#F1DA8B]/10 to-transparent blur-3xl" />
+                <div className="absolute inset-0 bg-gradient-to-l from-[white]/50 to-transparent" />
                 <Image
                   src="/images/trading.png"
                   alt="Index Chart"
@@ -987,7 +987,7 @@ export default function LandingPage() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#F1DA8B]/10 to-transparent blur-3xl" />
                 <Image
-                  src="/images/games.png"
+                  src="/images/image.png"
                   alt="Gaming Platform"
                   width={600}
                   height={400}
